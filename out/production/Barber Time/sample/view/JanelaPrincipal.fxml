@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="TELA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="estilo.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.ControlJanelaPrincipal">
+   <top>
+       <VBox alignment="CENTER">
+        <Text fx:id="txtLogo" strokeType="OUTSIDE" strokeWidth="0.0" text="Barber Time" BorderPane.alignment="CENTER" />
+           <ImageView fitHeight="286.0" fitWidth="301.0" BorderPane.alignment="BOTTOM_CENTER">
+               <image>
+                   <Image url="iconMain.png" />
+               </image>
+           </ImageView>
+       </VBox>
+   </top>
+    <center>
+            <GridPane alignment="CENTER">
+                <VBox spacing="10">
+                    <JFXButton fx:id="Button" onAction="#cadastrarCliente" prefHeight="39.0" prefWidth="162.0" style="-fx-border-radius: 50;" text="Cadastrar Cliente" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <JFXButton onAction="#manterAtendimento" prefHeight="39.0" prefWidth="162.0" text="Manter Atendimento" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <JFXButton onAction="#manterServico" prefHeight="39.0" prefWidth="162.0" text="Manter Serviço" GridPane.rowIndex="3" />
+                    <JFXButton onAction="#gerarRelatorio" prefHeight="39.0" prefWidth="162.0" text="Gerar Relatório" GridPane.rowIndex="3" />
+                </VBox>
+            </GridPane>
+    </center>
+    <bottom>
+        <Text text="Barber Time - 2019 Luiz Efigênio"> </Text>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.layout.HBox?>
+<?import sample.model.MaskedTextField?>
+<?import sample.model.NumberTextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TableView?>
+<BorderPane stylesheets="estilo.css" fx:id="TELA" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.ControlGerarRelatorio">
+
+<!--    <top >
+        <HBox alignment="CENTER">
+            <Text  fx:id="txtLogo" text="Cadastrar Cliente" ></Text>
+        </HBox>
+    </top>
+
+    <left>
+
+    </left>
+
+    <center>
+        <GridPane alignment="CENTER" vgap="2" >
+            <VBox>
+                <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField promptText="Nome" fx:id="nome" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Telefone:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <MaskedTextField  mask="(##)####-####" fx:id="telefone" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label text="CPF:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <MaskedTextField  mask="###.###.###-##" fx:id="cpf" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Label text="Data de Nascimento:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <JFXDatePicker fx:id="dataNascimento" GridPane.columnIndex="0" GridPane.rowIndex="8"></JFXDatePicker>
+                <Label text="Sexo:" GridPane.columnIndex="0" GridPane.rowIndex="9"></Label>
+                <ComboBox  fx:id="sexo" GridPane.columnIndex="0" GridPane.rowIndex="10">
+                </ComboBox>
+            </VBox>
+            <HBox GridPane.rowIndex="11" spacing="10" >
+                <JFXButton onAction="#confirmar" text="Confirmar" />
+                <JFXButton onAction="#voltar" text="Voltar"  />
+            </HBox>
+
+        </GridPane>
+    </center>
+
+    <right>
+
+    </right>
+
+    <bottom>
+    </bottom>-->
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Text fx:id="txtLogo" text="-Selecione uma data para Gerar Relatório-"></Text>
+            <JFXDatePicker fx:id="data"></JFXDatePicker>
+        </VBox>
+    </center>
+</BorderPane>

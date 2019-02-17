@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="TELA" prefHeight="441.0" prefWidth="813.0" stylesheets="estilo.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.JanelaManterAtendimento">
+    <top>
+        <HBox alignment="CENTER">
+            <Text fx:id="data" />
+        </HBox>
+    </top>
+
+    <left>
+
+    </left>
+
+    <center>
+        <GridPane alignment="CENTER" hgap="10" prefWidth="534.0" vgap="25">
+            <HBox spacing="10">
+                <TableView fx:id="tbAtendimento" prefHeight="285.0" prefWidth="572.0">
+                   <columns>
+                        <TableColumn fx:id="tcHora" prefWidth="71.00001525878906" resizable="false" sortable="false" text="Hora" />
+                       <TableColumn fx:id="tcData" editable="false" prefWidth="101.99998474121094" resizable="false" sortable="false" text="Data" />
+                       <TableColumn fx:id="tcNome" editable="false" prefWidth="131.0" resizable="false" sortable="false" text="Nome" />
+                       <TableColumn fx:id="tcServico" editable="false" prefWidth="149.0" resizable="false" sortable="false" text="Serviço" />
+                       <TableColumn fx:id="tcEstado" editable="false" prefWidth="117.0" resizable="false" sortable="false" text="Estado" />
+                   </columns>
+                </TableView>
+                <!--                <TableView fx:id="tbAtendimentoOk" prefHeight="200.0" prefWidth="200.0">
+                &lt;!&ndash;                    <columns>
+                                        <TableColumn fx:id="tcNome" prefWidth="122.0" resizable="false" text="Serviço" />
+                                        <TableColumn fx:id="tcValor" prefWidth="77.0" resizable="false" text="Valor" />
+                                    </columns>&ndash;&gt;
+                                </TableView>-->
+            </HBox>
+            <VBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <JFXButton onAction="#adicionarAtendimento" text="Adiconar Atendimento" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <JFXButton onAction="#removerAtendimento" text="Remover Atendimento" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <JFXButton onAction="#alterarAtendimento" text="Alterar Atendimento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <JFXButton onAction="#visualizarDia" text="Visualizar por Dia" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <GridPane onMouseClicked="#darBaixa" prefHeight="49.0" prefWidth="51.0" GridPane.rowIndex="0">
+                    <ImageView fitHeight="49.0" fitWidth="49.0">
+                        <image>
+                            <Image url="mais.png" />
+                        </image>
+                    </ImageView>
+                    <VBox prefHeight="49.0" prefWidth="157.0" GridPane.columnIndex="1" />
+                </GridPane>
+            </VBox>
+
+            <JFXButton onAction="#voltar" text="Voltar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TableView fx:id="tbAtendimentoEstado" prefHeight="200.0" prefWidth="448.0" GridPane.rowIndex="2">
+                <columns>
+                    <TableColumn fx:id="tcHora2" prefWidth="64.0" resizable="false" sortable="false" text="Hora" />
+                    <TableColumn fx:id="tcData2" editable="false" prefWidth="110.99998474121094" resizable="false" sortable="false" text="Data" />
+                    <TableColumn fx:id="tcNome2" editable="false" prefWidth="135.0" resizable="false" sortable="false" text="Nome" />
+                    <TableColumn fx:id="tcServico2" editable="false" prefWidth="146.0" resizable="false" sortable="false" text="Serviço" />
+                    <TableColumn fx:id="tcEstado2" editable="false" prefWidth="114.0" resizable="false" sortable="false" text="Estado" />
+                </columns>
+            </TableView>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+         </GridPane>
+    </center>
+
+    <right>
+
+    </right>
+
+    <bottom>
+    </bottom>
+
+</BorderPane>

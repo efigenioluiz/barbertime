@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="TELA" prefHeight="491.0" prefWidth="762.0" stylesheets="estilo.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.ControlAdicionarAtendimento">
+
+    <top>
+        <HBox alignment="CENTER">
+            <Text fx:id="txtLogo" text="Adicionar Atendimento" />
+        </HBox>
+    </top>
+
+    <left>
+        <TableView fx:id="cliente" prefHeight="438.0" prefWidth="396.0">
+            <columns>
+                <TableColumn fx:id="tcNome" prefWidth="206.0" resizable="false" text="Nome" />
+                <TableColumn fx:id="tcCpf" prefWidth="159.0" resizable="false" text="CPF" />
+            </columns>
+        </TableView>
+    </left>
+
+    <center>
+        <GridPane alignment="CENTER" vgap="15">
+            <VBox prefHeight="50.0" prefWidth="191.0" spacing="10">
+                <JFXDatePicker fx:id="dataAtendimento" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <JFXTimePicker fx:id="horaAtendimento" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            </VBox>
+            <VBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <JFXComboBox fx:id="cbServico" promptText="Serviço" />
+            </VBox>
+
+            <HBox spacing="10" GridPane.rowIndex="4">
+                <JFXButton onAction="#confirmar" text="Confirmar" />
+                <JFXButton onAction="#voltar" text="Voltar" />
+            </HBox>
+
+        </GridPane>
+    </center>
+
+    <right>
+
+    </right>
+
+    <bottom>
+    </bottom>
+</BorderPane>

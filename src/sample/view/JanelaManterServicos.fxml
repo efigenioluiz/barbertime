@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="TELA" prefHeight="400.0" prefWidth="600.0" stylesheets="estilo.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.ControlManterServico">
+    <top>
+
+    </top>
+
+    <left>
+
+    </left>
+
+    <center>
+        <GridPane alignment="CENTER" hgap="20" prefWidth="534.0">
+            <HBox spacing="20">
+                 <TableView fx:id="tbServicos" prefHeight="374.0" prefWidth="294.0">
+                   <columns>
+                     <TableColumn fx:id="tcNome" prefWidth="140.0" resizable="false" text="Serviço" />
+                     <TableColumn fx:id="tcValor" prefWidth="151.0" resizable="false" text="Valor" />
+                   </columns>
+                 </TableView>
+            </HBox>
+            <VBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <JFXButton onAction="#adicionarServico" text="Adiconar Serviços" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <JFXButton onAction="#removerServico" text="Remover Serviços" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <JFXButton onAction="#alterarServico" text="Alterar Serviços" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </VBox>
+
+             <JFXButton onAction="#voltar" text="Voltar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        </GridPane>
+    </center>
+
+    <right>
+
+    </right>
+
+    <bottom>
+    </bottom>
+
+</BorderPane>

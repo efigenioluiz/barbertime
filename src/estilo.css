@@ -1,0 +1,16 @@
+#yellow{
+}
+#coluna1{
+
+    -fx-text-alignment: left;
+}
+#TELA{
+    -fx-background-color: white;
+}
+#txtLogo{
+    -fx-font-size: 20;
+}
+.button{
+    -fx-background-color: #c7d1cc;
+    -fx-text-fill: black;
+}

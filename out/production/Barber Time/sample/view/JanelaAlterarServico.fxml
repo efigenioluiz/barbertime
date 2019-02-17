@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import sample.model.NumberTextField?>
+<?import javafx.scene.text.Text?>
+<BorderPane fx:id="TELA" stylesheets="estilo.css" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.control.ControlAlterarServico"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="CENTER">
+            <Text fx:id="txtLogo" text="Alterar Serviço" ></Text>
+        </HBox>
+    </top>
+    <center>
+        <GridPane alignment="CENTER" vgap="15">
+            <VBox alignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <JFXComboBox promptText="Serviço" fx:id="cbServico"></JFXComboBox>
+            </VBox>
+            <VBox spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="0">
+                <NumberTextField promptText="Valor" fx:id="valor" ></NumberTextField>
+            </VBox>
+            <HBox spacing="10" alignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="0">
+                <JFXButton onAction="#Alterar" text="Alterar"></JFXButton>
+                <JFXButton onAction="#Voltar" text="Voltar"></JFXButton>
+            </HBox>
+        </GridPane>
+    </center>
+</BorderPane>
