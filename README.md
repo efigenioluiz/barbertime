@@ -1,3 +1,3 @@
-System for Barber Shop.
-Barber Time !
+#System for Barber Shop.
+#Barber Time !
 by:  Efigenio, Luiz.
